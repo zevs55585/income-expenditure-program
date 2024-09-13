@@ -8,6 +8,7 @@ $r = $_SESSION["user"]
 <html>
 	<head>
 		<title>ychet - user profile</title>
+
 	</head>
 	<body>
 <a href="index.php">главная сраница</a>

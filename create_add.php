@@ -1,6 +1,6 @@
 <?php
 require("db.php");
-print_r($_GET);
+//print_r($_GET);
 
 $user_id = $_SESSION["user"]["id"];
 $date = mysqli_real_escape_string($link, $_GET["date"]);

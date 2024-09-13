@@ -1,6 +1,6 @@
 <?php
   require("db.php");
-    print_r($_GET);
+    //print_r($_GET);
     $result_id=$_GET['id'];
     $result = mysqli_query($link, 'SELECT * From expenses_and_incomes Where id = "'.$_GET['id'].'"');
 
@@ -20,6 +20,8 @@
 <html>
     <head>
         <title>Ychet - update Ychet</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <!-- <link rel="stylesheet" href="style.css"> -->
     </head>
     <body>
 <a href="index.php">Главная страница</a>
@@ -74,7 +76,7 @@
 
 <tr>
     <td>
-        Описание задачи
+        Описание
     </td>
     <td>
         <input name= "description" type="text"value="<?= $result['description'] ?>">

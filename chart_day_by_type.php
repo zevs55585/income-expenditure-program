@@ -1,7 +1,7 @@
 <?php
 require("db.php");
 
-print_r($_GET);
+//print_r($_GET);
 
 function allYchetByUserByDayType($link, $user_id) {
     $result = mysqli_query($link, "SELECT date, sum(case when type = 'expense' then amount else 0 end) expense, sum(case when type = 'income' then amount else 0 end) income FROM `expenses_and_incomes` Where user_id = '$user_id' GROUP by date Order by date asc;");
